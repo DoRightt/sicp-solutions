@@ -1,57 +1,57 @@
 ; 10 -> 10
-(print 10)
+(display 10) (newline)
 
 ; (+ 5 3 4) -> 12
-(print (+ 5 3 4))
+(display (+ 5 3 4)) (newline)
 
 ; (- 9 1) -> 8
-(print (- 9 1))
+(display (- 9 1)) (newline)
 
 ; (/ 6 2) -> 3
-(print (/ 6 2))
+(display (/ 6 2)) (newline)
 
 ; (+ (* 2 4) (- 4 6)) -> 6
-(print (+ (* 2 4) (- 4 6)))
+(display (+ (* 2 4) (- 4 6))) (newline)
 
 ; (define a 3) -> 3
-(defvar a 3)
-(print a)
+(define a 3)
+(display a) (newline)
 
 ; (define b (+ a 1)) -> 4
-(defvar b (+ a 1))
-(print b)
+(define b (+ a 1))
+(display b) (newline)
 
 ; (+ a b (* a b)) -> 19
-(print (+ a b (* a b)))
+(display (+ a b (* a b))) (newline)
 
-; (= a b) -> NIL
-(print (= a b))
+; (= a b) -> #f
+(display (= a b)) (newline)
 
 ; (if (and (> b a) (< b (* a b))) -> b(4)
 ;   b
 ;   a)
-(print (if (and (> b a) (< b (* a b)))
+(display (if (and (> b a) (< b (* a b)))
     b
     a)
-)
+) (newline)
 
 ; (cond ((= a 4) 6) -> 16
 ;    ((= b 4) (+ 6 7 a))
 ;    (else 25))
-(print (cond ((= a 4) 6)
+(display (cond ((= a 4) 6)
     ((= b 4) (+ 6 7 a))
     (else 25))
-)
+) (newline)
 
 ; (+ 2 (if (> b a) b a)) -> 6
-(print (+ 2 (if (> b a) b a)))
+(display (+ 2 (if (> b a) b a))) (newline)
 
-;   (* (cond ((> a b) a) -> 16
+; (* (cond ((> a b) a) -> 16
 ;           ((< a b) b)
 ;           (else -1))
 ;       (+ a 1))
-(print (* (cond ((> a b) a)
+(display (* (cond ((> a b) a)
         ((< a b) b)
         (else -1))
         (+ a 1))
-)
+) (newline)
